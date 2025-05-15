@@ -353,7 +353,7 @@ p {
     font-weight: bold;
     transition: 0.5s all ease;
     text-decoration: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 10px;
 }
