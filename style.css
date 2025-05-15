@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+html, body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+:root {
+    --primary: #e63b40;
+    --secondary: #faefe6;
+    --accent: #ffcfec;
+}
+
+body {
+    background-color: var(--primary);
+    font-family: Raleway;
+}
+
+body::before {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-image: url(images/backgroundchess.png);
+    content: "";
+    filter: invert();
+    opacity: 0.5;
+}
+
+body > * {
+    z-index: 10;
+    position: relative;
+}
+
+.wrapper {
+    padding-inline: 16px;
+    max-width: 1536px;
+    margin: auto;
+}
+
+h1, .logo {
+    font-family: "Erica One";
+    font-weight: normal;
+    color: var(--secondary);
+    font-size: 50px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+header span, footer a span, header a span {
+    color: #ffcfec;
+}
+
+header .wrapper {
+    padding: 15px 16px;
+    position: relative;
+}
+
+.logo, .toggle {
+    display: block;
+    background-color: rgb(250, 239, 230, 0.15);
+    border-radius: 30px;
+    font-size: 30px;
+    line-height: 1;
+    padding: 10px 25px;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    text-decoration: none;
+    border: none;
+    color: white;
+}
+
+.toggle {
+    right: 16px;
+    left: auto;
+    display: none;
+}
+
+ion-icon {
+    line-height: 1;
+    display: block;
+}
+
+nav {
+    display: block;
+    background-color: rgb(250, 239, 230, 0.15);
+    border-radius: 30px;
+    padding: 10px 30px;
+    backdrop-filter: blur(5px);
+    width: max-content;
+    margin: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    line-height: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+nav a:hover, .footer_list a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--accent);
+}
+
+.hero {
+    height: 100vh;
+    padding-block: 80px;
+    display: flex;
+    align-items: end;
+}
+
+.hero_thank_you {
+    display: grid;
+    place-items: center;
+}
+
+.thank_you {
+    background-color: var(--secondary);
+    padding: 100px;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 2;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.thank_you p {
+    margin-bottom: 60px;
+}
+
+.hero h1 span {
+    font-size: 70px;
+    line-height: 1;
+}
+
+.hero h1 {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.section {
+    background-color: var(--secondary);
+    padding-block: 50px;
+}
+
+.section .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h2 {
+    font-family: Galindo;
+    font-size: 40px;
+    color: var(--primary);
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgb(47, 47, 47);
+}
+
+.racoon {
+    transform: scaleX(-1);
+    max-height: 500px;
+    max-width: 100%;
+}
+
+#skills {
+    background-color: var(--primary);
+    overflow: hidden;
+    position: relative;
+}
+
+#skills::before {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-image: url(images/backgroundchess.png);
+    content: "";
+    filter: invert();
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#skills > * {
+    z-index: 10;
+    position: relative;
+}
+
+#skills h2 {
+    color: var(--secondary);
+}
+
+#skills p {
+    color: var(--secondary);
+    margin-bottom: 40px;
+}
+
+.skill_list {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.skill_text {
+    margin-bottom: 80px;
+}
+
+.skill {
+    background-color: var(--accent);
+    border-radius: 100px;
+    position: relative;
+    cursor: help;
+}
+
+.skill:hover .lang {
+    left: 40%;
+}
+
+.level {
+    font-weight: bold;
+    color: var(--primary);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: 50%;
+    height: 80px;
+}
+
+.lang {
+    font-weight: 800;
+    width: 60%;
+    color:rgb(31, 31, 31);
+    display: grid;
+    place-items: center;
+    background-color: var(--secondary);
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    transition: 0.5s left ease;
+}
+
+.cv {
+    background-color: var(--secondary);
+    text-decoration: none;
+    color: rgb(47, 47, 47);
+    padding: 20px;
+    border-radius: 100px;
+    font-weight: bold;
+    transition: 0.5s all ease;
+}
+
+.cv:hover {
+    background-color: var(--accent);
+    color: var(--primary)
+}
+
+#form .wrapper {
+    display: block;
+}
+
+#form {
+    background-color: var(--secondary);
+    text-align: center;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 30px;
+    text-align: left;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.form label {
+    display: block;
+    color: rgb(47, 47, 47);
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+.form input, .form textarea{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 100px;
+    padding-inline: 20px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form input:focus ,.form textarea:focus {
+    outline-color: var(--primary);
+    outline-width: 1px !important;
+    outline-style: solid;
+}
+
+.form textarea {
+    border-radius: 25px;
+    height: auto;
+    padding: 20px;
+    resize: none;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.button {
+    width: max-content;
+    background-color: var(--primary);
+    border: none;
+    color: var(--secondary);
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 100px;
+    font-weight: bold;
+    transition: 0.5s all ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+footer .logo {
+    position: static;
+    width: max-content;
+}
+
+footer {
+    background-color: var(--primary);
+    padding-top: 50px;
+}
+
+footer p {
+    text-align: center;
+    color: var(--secondary);
+    margin-block: 30px;
+}
+
+h3 {
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.footer_menu {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: start;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.footer_list a {
+    color: var(--secondary);
+    line-height: 2;
+    transition: 0.15s color ease;
+}
+
+.footer_list a:hover {
+    color: var(--accent);
+}
+
+.open {
+    display: block;
+}
+
+.open .active {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+.open .close {
+    display: block;
+}
+
+@media (max-width:768px) {
+    .section .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: 0;
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .skill_list {
+        width: 100%;
+    }
+
+    .skill .lang{
+        width: 50%;
+    }
+
+    .skill:hover .lang{
+        left: 50%;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .wide {
+        grid-column: span 1;
+    }
+
+    .footer_menu {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer_menu_list {
+        margin: auto;
+    }
+}
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kateřina Hladíková | Junior Front-End Developer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Erica+One&family=Galindo&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="wrapper">
+                <a href="#hero" class="logo">KH<span>.</span></a>
+                <button class="toggle"><ion-icon name="menu" class="active"></ion-icon><ion-icon name="close" class="close"></ion-icon></button>
+
+                <nav>
+                    <ul>
+                        <li><a href="#hero">Domů</a></li>
+                        <li><a href="#about">O mně</a></li>
+                        <li><a href="#skills">Zkušenosti</a></li>
+                        <li><a href="#form">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero wrapper" id="hero">
+                <h1>Ahoj,<br><span>já jsem Katka</span></h1>
+            </section>
+
+            <section class="section" id="about">
+                <div class="wrapper">
+                    <div>
+                        <img class="racoon" src="images/Racoon.png">
+                    </div>
+                    <div>
+                        <h2>O mně</h2>
+                        <p>Vítám Tě tu, právě se díváš na můj úplně první web. Jsem začínající front-end developerka, která se učí tvořit moderní a funkční weby. Miluju hrát si s barvami, designem a tvořit věci, které nejen fungují, ale i skvěle vypadají. Baví mě psát kód, učit se nové programovací jazyky a objevovat, co všechno dokáže kreativita ve světě webu.</p>
+                        <p>Většinu věcí, které umím, jsem se naučila díky vlastním malým projektům, na kterých jsem si mohla vyzkoušet jak věci opravdu fungují. Svoje znalosti ale nemůžu odepřít ani kurzu, který aktuálně absolvuji. Zatím si rozumím s <b>HTML</b>, <b>CSS/SCSS</b> a <b>JavaScriptem</b>. Do budoucna bych se chtěla naučit  React, TypeScript, nebo třeba zavítat do backendu.</p>
+                    </div>
+                </div>    
+            </section>
+
+            <section class="section" id="skills">
+                <div class="wrapper">
+                    <div class="skill_text">
+                        <h2>Moje zkušenosti</h2>
+                        <p>Chceš o mně vědět ještě víc?</p>
+                        <a href="Kateřina Hladíková životopis.pdf" download class="cv">Stáhni si můj životopis</a>
+                    </div>
+                
+                    <div class="skill_list">
+                        <div class="skill">
+                            <span class="level">
+                                Mírně
+                                <br>
+                                pokročilá
+                            </span>
+                            <span class="lang">
+                                HTML
+                            </span>
+                        </div>
+
+                        <div class="skill">
+                            <span class="level">
+                                Mírně
+                                <br>
+                                pokročilá
+                            </span>
+                            <span class="lang">
+                                CSS / SCSS
+                            </span>
+                        </div>
+
+                        <div class="skill">
+                            <span class="level">
+                            Začátečník
+                            </span>
+                            <span class="lang">
+                                JavaScript
+                            </span>
+                        </div>
+
+                        <div class="skill">
+                            <span class="level">
+                            Mírně
+                            <br>
+                            pokročilá
+                            </span>
+                            <span class="lang">
+                                Figma
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="form" class="section">
+                <div class="wrapper">
+                    <div>
+                        <h2>Kontakt</h2>
+                        <p>Máš něco na srdci nebo se ti jen líbí moje práce? Dej mi vědět!</p>
+                    </div>
+                    
+                    <form action="https://api.web3forms.com/submit" method="POST" class="form">
+                        <input type="hidden" name="access_key" value="28f5876f-34bd-4595-b1a7-bd65fe3f6a1f">
+                        <input type="hidden" name="redirect" value="http://127.0.0.1:5500/form.html">
+                        <div>
+                            <label for="name">Jméno a příjmení</label>
+                            <input required name="name" id="name" type="text" placeholder="Vaše jméno">
+                        </div>
+
+                        <div>
+                            <label for="mail">E-mail</label>
+                            <input required name="mail" id="mail" type="email" placeholder="Váš e-mail">
+                        </div>
+
+                        <div class="wide">
+                            <label for="subject">Předmět</label>
+                            <input required name="subject" id="subject" type="text" placeholder="Předmět">
+                        </div>
+
+                        <div class="wide">
+                            <label for="message">Zpráva</label>
+                            <textarea required name="message" id="message" placeholder="Vaše zpráva" rows="6"></textarea>
+                        </div>
+
+                        <button type="submit" class="button">
+                            <ion-icon name="send-outline"></ion-icon>
+                            Odeslat
+                        </button>
+                    </form>
+                </div>         
+            </section>
+        </main>
+
+        <footer class="wrapper">
+            <div class="footer_menu">
+                <a href="#hero" class="logo">KH<span>.</span></a>
+                <div class="footer_menu_list">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li class="footer_list"><a href="#hero">Domů</a></li>
+                        <li class="footer_list"><a href="#about">O mně</a></li>
+                        <li class="footer_list"><a href="#skills">Zkušenosti</a></li>
+                        <li class="footer_list"><a href="#form">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+             <p>&copy; Kateřina Hladíková 2025</p>
+        </footer>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
