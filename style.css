@@ -191,6 +191,8 @@ p {
     transform: scaleX(-1);
     max-height: 500px;
     max-width: 100%;
+    margin: auto;
+    display: block;
 }
 
 #skills {
@@ -243,6 +245,7 @@ p {
     border-radius: 100px;
     position: relative;
     cursor: help;
+    display: flex;
 }
 
 .skill:hover .lang {
@@ -377,6 +380,7 @@ footer p {
     text-align: center;
     color: var(--secondary);
     margin-block: 30px;
+    grid-column: span 4;
 }
 
 h3 {
@@ -384,7 +388,7 @@ h3 {
     margin-bottom: 20px;
 }
 
-.footer_menu {
+footer.wrapper {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: start;
@@ -445,16 +449,20 @@ footer a {
         display: block;
     }
 
+    .skill {
+        justify-content: end;
+    }
+
     .skill_list {
         width: 100%;
     }
 
     .skill .lang{
-        width: 50%;
+        width: 55%;
     }
 
     .skill:hover .lang{
-        left: 50%;
+        left: 0%;
     }
 
     .form {
@@ -465,12 +473,16 @@ footer a {
         grid-column: span 1;
     }
 
-    .footer_menu {
+    footer.wrapper {
         grid-template-columns: 1fr 1fr;
     }
 
     .footer_menu_list {
         margin: auto;
+    }
+
+    footer p {
+        grid-column: span 2;
     }
 }
 
