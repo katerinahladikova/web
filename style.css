@@ -190,7 +190,9 @@ p {
 .racoon {
     transform: scaleX(-1);
     max-height: 500px;
+    height: auto;
     max-width: 100%;
+    width: auto;
     margin: auto;
     display: block;
 }
@@ -458,7 +460,7 @@ footer a {
     }
 
     .skill .lang{
-        width: 55%;
+        width: 0%;
     }
 
     .skill:hover .lang{
